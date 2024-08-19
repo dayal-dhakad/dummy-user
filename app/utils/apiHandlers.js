@@ -3,7 +3,7 @@ import Cookies from 'js-cookie';
 import toast from 'react-hot-toast';
 
 const isDevelopment = process.env.NODE_ENV !== 'production';
-const isProductionApp = process.env.APP_ENV === 'production';
+const isProductionApp = process.env.REACT_APP_APP_ENV === 'production';
 
 export const setAuthCookie = (token) => {
   setTimeout(() => {
@@ -68,7 +68,7 @@ const handleApiError = (err) => {
 };
 
 export const postReq = async (endpoint, data) => {
-  const url = process.env.API_URL + endpoint;
+  const url = `https://vista-task-server-snkf.onrender.com/api${endpoint}`;
   const headers = {
     Accept: 'application/json',
     Authorization: getUserToken(),
@@ -84,7 +84,7 @@ export const postReq = async (endpoint, data) => {
 };
 
 export const patchReq = async (endpoint, data) => {
-  const url = process.env.API_URL + endpoint;
+  const url = `https://vista-task-server-snkf.onrender.com/api${endpoint}`;
 
   const headers = {
     Accept: 'application/json',
@@ -102,7 +102,7 @@ export const patchReq = async (endpoint, data) => {
 };
 
 export const getReq = async (endpoint) => {
-  const url = process.env.API_URL + endpoint;
+  const url = `https://vista-task-server-snkf.onrender.com/api${endpoint}`;
 
   const headers = {
     Accept: 'application/json',
