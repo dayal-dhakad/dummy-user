@@ -276,29 +276,6 @@ const Dashboard = () => {
               </div>
             </div>
             <div className="input-div">
-              <label
-                className="input-label"
-                htmlFor="currentWorkingCompanyName"
-              >
-                Current Working Company Name
-              </label>
-              <input
-                className="input-box"
-                type="text"
-                id="currentWorkingCompanyName"
-                placeholder="Enter your Current Working"
-                name="currentWorkingCompanyName"
-                onChange={handleChange}
-              />
-              <div className="error">
-                {formError.currentWorkingCompanyName && (
-                  <div className="form-eror">
-                    {formError.currentWorkingCompanyName}
-                  </div>
-                )}
-              </div>
-            </div>
-            <div className="input-div">
               <label className="input-label" htmlFor="companyName">
                 Company Name
               </label>

@@ -55,9 +55,7 @@ export const validateForm = Yup.object().shape({
   relativeNumber: Yup.string()
     .matches(/^[0-9]+$/, 'Relative Number must be digits')
     .required('Relative Number is required'),
-  currentWorkingCompanyName: Yup.string().required(
-    'Current Working Company name is required',
-  ),
+  companyName: Yup.string().required('Company name is required'),
   companyAddress: Yup.string().required('Company Address is required'),
   companyContactNumber: Yup.string()
     .matches(/^[0-9]+$/, 'Company Contact Number must be digits')
