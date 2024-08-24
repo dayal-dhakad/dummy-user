@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-
 import { reactIcons } from '@/utils/icons';
 import { isYupError, parseYupError } from '@/utils/Yup';
 import toast from 'react-hot-toast';
@@ -20,22 +19,19 @@ const Dashboard = () => {
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     try {
       setIsLoading(true);
-
       const [, ValidationErr] = await validateData(validateForm, form);
       if (ValidationErr) {
         setFormError(ValidationErr);
         return;
       }
 
-      console.log(form);
       const res = await postReq('/user/user-meta', form);
-      const { status, error, data } = res;
+      const { status, error } = res;
 
       if (status) {
-        toast.success(data.message);
+        toast.success('Details Submitted');
         setForm({});
       } else if (error) {
         Array.isArray(error.message)
@@ -70,6 +66,7 @@ const Dashboard = () => {
                 placeholder="Enter your first name "
                 name="firstName"
                 onChange={handleChange}
+                onPaste={(e) => e.preventDefault()}
               />
               <div className="error">
                 {formError.firstName && (
@@ -88,6 +85,7 @@ const Dashboard = () => {
                 placeholder="Enter your last name"
                 name="lastName"
                 onChange={handleChange}
+                onPaste={(e) => e.preventDefault()}
               />
               <div className="error">
                 {formError.lastName && (
@@ -106,6 +104,7 @@ const Dashboard = () => {
                 placeholder="Enter your Father's name"
                 name="fatherName"
                 onChange={handleChange}
+                onPaste={(e) => e.preventDefault()}
               />
               <div className="error">
                 {formError.fatherName && (
@@ -124,6 +123,7 @@ const Dashboard = () => {
                 placeholder="Enter your Current Address"
                 name="currentAddress"
                 onChange={handleChange}
+                onPaste={(e) => e.preventDefault()}
               />
               <div className="error">
                 {formError.currentAddress && (
@@ -142,6 +142,7 @@ const Dashboard = () => {
                 placeholder="Enter your Permanent Address"
                 name="permanentAddress"
                 onChange={handleChange}
+                onPaste={(e) => e.preventDefault()}
               />
               <div className="error">
                 {formError.permanentAddress && (
@@ -160,6 +161,7 @@ const Dashboard = () => {
                 placeholder="Enter your Contact Number"
                 name="contactNumber"
                 onChange={handleChange}
+                onPaste={(e) => e.preventDefault()}
               />
               <div className="error">
                 {formError.contactNumber && (
@@ -178,6 +180,7 @@ const Dashboard = () => {
                 placeholder="Enter your Alternate Number"
                 name="alternateNumber"
                 onChange={handleChange}
+                onPaste={(e) => e.preventDefault()}
               />
               <div className="error">
                 {formError.alternateNumber && (
@@ -196,6 +199,7 @@ const Dashboard = () => {
                 placeholder="Enter your Emergency Number"
                 name="emergencyNumber"
                 onChange={handleChange}
+                onPaste={(e) => e.preventDefault()}
               />
               <div className="error">
                 {formError.emergencyNumber && (
@@ -214,6 +218,7 @@ const Dashboard = () => {
                 placeholder="Enter your Email"
                 name="emailId"
                 onChange={handleChange}
+                onPaste={(e) => e.preventDefault()}
               />
               <div className="error">
                 {formError.emailId && (
@@ -232,6 +237,7 @@ const Dashboard = () => {
                 placeholder="Enter your Relative Name"
                 name="relativeName"
                 onChange={handleChange}
+                onPaste={(e) => e.preventDefault()}
               />
               <div className="error">
                 {formError.relativeName && (
@@ -250,6 +256,7 @@ const Dashboard = () => {
                 placeholder="Enter your Relative Relation"
                 name="relativeRelation"
                 onChange={handleChange}
+                onPaste={(e) => e.preventDefault()}
               />
               <div className="error">
                 {formError.relativeRelation && (
@@ -268,6 +275,7 @@ const Dashboard = () => {
                 placeholder="Enter your Relative Number"
                 name="relativeNumber"
                 onChange={handleChange}
+                onPaste={(e) => e.preventDefault()}
               />
               <div className="error">
                 {formError.relativeNumber && (
@@ -286,6 +294,7 @@ const Dashboard = () => {
                 placeholder="Enter your Company Name"
                 name="companyName"
                 onChange={handleChange}
+                onPaste={(e) => e.preventDefault()}
               />
               <div className="error">
                 {formError.companyName && (
@@ -304,6 +313,7 @@ const Dashboard = () => {
                 placeholder="Enter your Company Address"
                 name="companyAddress"
                 onChange={handleChange}
+                onPaste={(e) => e.preventDefault()}
               />
               <div className="error">
                 {formError.companyAddress && (
@@ -322,6 +332,7 @@ const Dashboard = () => {
                 placeholder="Enter your Company Address"
                 name="companyContactNumber"
                 onChange={handleChange}
+                onPaste={(e) => e.preventDefault()}
               />
               <div className="error">
                 {formError.companyContactNumber && (
@@ -343,6 +354,7 @@ const Dashboard = () => {
                 placeholder="Enter your Contact Person Name"
                 name="contactPersonName"
                 onChange={handleChange}
+                onPaste={(e) => e.preventDefault()}
               />
               <div className="error">
                 {formError.contactPersonName && (
@@ -381,6 +393,7 @@ const Dashboard = () => {
                 placeholder="Enter your Agent Name"
                 name="agentName"
                 onChange={handleChange}
+                onPaste={(e) => e.preventDefault()}
               />
               <div className="error">
                 {formError.agentName && (
@@ -399,6 +412,7 @@ const Dashboard = () => {
                 placeholder="Enter your Agent Employee Id"
                 name="agentEmployeeId"
                 onChange={handleChange}
+                onPaste={(e) => e.preventDefault()}
               />
               <div className="error">
                 {formError.agentEmployeeId && (
@@ -417,6 +431,7 @@ const Dashboard = () => {
                 placeholder="Enter your Verify Executive"
                 name="verifyExecutive"
                 onChange={handleChange}
+                onPaste={(e) => e.preventDefault()}
               />
               <div className="error">
                 {formError.verifyExecutive && (
@@ -435,6 +450,7 @@ const Dashboard = () => {
                 placeholder="Enter your Verify Name"
                 name="verifyName"
                 onChange={handleChange}
+                onPaste={(e) => e.preventDefault()}
               />
               <div className="error">
                 {formError.verifyName && (
@@ -453,6 +469,7 @@ const Dashboard = () => {
                 placeholder="Enter yourVerify Employee Id"
                 name="verifyEmployeeId"
                 onChange={handleChange}
+                onPaste={(e) => e.preventDefault()}
               />
               <div className="error">
                 {formError.verifyEmployeeId && (
@@ -471,6 +488,7 @@ const Dashboard = () => {
                 placeholder="Enter your Verify Number"
                 name="verifyNumber"
                 onChange={handleChange}
+                onPaste={(e) => e.preventDefault()}
               />
               <div className="error">
                 {formError.verifyNumber && (
@@ -514,6 +532,7 @@ const Dashboard = () => {
                 placeholder="Enter your Insuarance Price"
                 name="insurancePrice"
                 onChange={handleChange}
+                onPaste={(e) => e.preventDefault()}
               />
               <div className="error">
                 {formError.insurancePrice && (
@@ -532,6 +551,7 @@ const Dashboard = () => {
                 placeholder="Enter your Remark"
                 name="remark"
                 onChange={handleChange}
+                onPaste={(e) => e.preventDefault()}
               />
               <div className="error">
                 {formError.remark && (

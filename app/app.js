@@ -25,10 +25,10 @@ function App() {
         </Routes>
       </BrowserRouter>
       <Toaster
-        position="top-right"
+        position="top-center"
         reverseOrder={false}
         containerStyle={{ top: '8px' }}
-        toastOptions={{ duration: 3000, position: 'top-right' }}
+        toastOptions={{ duration: 3000, position: 'top-center' }}
       />
     </Provider>
   );
