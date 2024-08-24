@@ -6,22 +6,9 @@ import { useNavigate } from 'react-router-dom';
 const Navbar = () => {
   const navigate = useNavigate();
   const handleLogout = async () => {
-    try {
-      const res = await postReq('/auth/logout');
-      const { status } = res;
-      if (status) {
-        removeAuthCookie();
-        navigate('/login');
-        toast.success('Log out successfully');
-      } else if (!status) {
-        removeAuthCookie();
-        navigate('/login');
-        toast.success('Log out successfully');
-      }
-    } catch (error) {
-      toast.error(error);
-      console.log(error, 'error in handle logout');
-    }
+    removeAuthCookie();
+    navigate('/login');
+    toast.success('Log out successfully');
   };
   return (
     <nav className="container border-b border-gray-500 py-3">
