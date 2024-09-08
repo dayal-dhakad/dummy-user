@@ -66,7 +66,6 @@ const Dashboard = () => {
                 placeholder="Enter Employee Id "
                 name="employeeId"
                 onChange={handleChange}
-                onPaste={(e) => e.preventDefault()}
               />
               <div className="error">
                 {formError.employeeId && (
@@ -85,7 +84,6 @@ const Dashboard = () => {
                 placeholder="Enter Business name "
                 name="businessName"
                 onChange={handleChange}
-                onPaste={(e) => e.preventDefault()}
               />
               <div className="error">
                 {formError.businessName && (
@@ -105,7 +103,6 @@ const Dashboard = () => {
                 placeholder="Enter Address"
                 name="address"
                 onChange={handleChange}
-                onPaste={(e) => e.preventDefault()}
               />
               <div className="error">
                 {formError.address && (
@@ -125,7 +122,6 @@ const Dashboard = () => {
                 placeholder="Enter city"
                 name="city"
                 onChange={handleChange}
-                onPaste={(e) => e.preventDefault()}
               />
               <div className="error">
                 {formError.city && (
@@ -144,7 +140,6 @@ const Dashboard = () => {
                 placeholder="Enter state"
                 name="state"
                 onChange={handleChange}
-                onPaste={(e) => e.preventDefault()}
               />
               <div className="error">
                 {formError.state && (
@@ -163,7 +158,6 @@ const Dashboard = () => {
                 placeholder="Enter your Relative Number"
                 name="pinCode"
                 onChange={handleChange}
-                onPaste={(e) => e.preventDefault()}
               />
               <div className="error">
                 {formError.pinCode && (
@@ -182,7 +176,6 @@ const Dashboard = () => {
                 placeholder="Enter whatsapp Number"
                 name="whatsappNumber"
                 onChange={handleChange}
-                onPaste={(e) => e.preventDefault()}
               />
               <div className="error">
                 {formError.whatsappNumber && (
@@ -201,7 +194,6 @@ const Dashboard = () => {
                 placeholder="Enter phone number"
                 name="phoneNumber"
                 onChange={handleChange}
-                onPaste={(e) => e.preventDefault()}
               />
               <div className="error">
                 {formError.phoneNumber && (
@@ -220,7 +212,6 @@ const Dashboard = () => {
                 placeholder="Enter gst number"
                 name="gstNumber"
                 onChange={handleChange}
-                onPaste={(e) => e.preventDefault()}
               />
               <div className="error">
                 {formError.gstNumber && (
@@ -240,7 +231,6 @@ const Dashboard = () => {
                 placeholder="Enter year of establishment"
                 name="yearOfEstablishment"
                 onChange={handleChange}
-                onPaste={(e) => e.preventDefault()}
               />
               <div className="error">
                 {formError.yearOfEstablishment && (
@@ -262,7 +252,6 @@ const Dashboard = () => {
                 placeholder="Enter rating"
                 name="rating"
                 onChange={handleChange}
-                onPaste={(e) => e.preventDefault()}
               />
               <div className="error">
                 {formError.rating && (
@@ -282,7 +271,6 @@ const Dashboard = () => {
                 placeholder="Enter link"
                 name="sourcesLink"
                 onChange={handleChange}
-                onPaste={(e) => e.preventDefault()}
               />
               <div className="error">
                 {formError.sourcesLink && (
@@ -301,7 +289,6 @@ const Dashboard = () => {
                 placeholder="Enter Sources Platform"
                 name="sourcesPlatform"
                 onChange={handleChange}
-                onPaste={(e) => e.preventDefault()}
               />
               <div className="error">
                 {formError.sourcesPlatform && (
