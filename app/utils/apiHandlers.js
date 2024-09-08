@@ -6,12 +6,23 @@ const isDevelopment = process.env.NODE_ENV !== 'production';
 const isProductionApp = process.env.REACT_APP_APP_ENV === 'production';
 
 export const setAuthCookie = (token) => {
-  setTimeout(() => {
-    removeAuthCookie();
-    window.location.reload();
-  }, 86400000);
+  const now = new Date();
+  const currentHour = now.getHours();
+  const currentMinute = now.getMinutes();
+  const loginHour = 9;
+  const logoutHour = 18;
+  const logoutMinute = 45;
+
+  if (
+    currentHour < loginHour ||
+    (currentHour === loginHour && currentMinute < 0)
+  ) {
+    toast.error('Something went wrong');
+    return;
+  }
+
   Cookies.set('token', token);
-  return Cookies.set(
+  Cookies.set(
     isDevelopment
       ? 'test__user__isLoggedIn'
       : isProductionApp
@@ -20,6 +31,24 @@ export const setAuthCookie = (token) => {
     'true',
     { expires: 1 },
   );
+
+  if (
+    currentHour > logoutHour ||
+    (currentHour === logoutHour && currentMinute >= logoutMinute)
+  ) {
+    removeAuthCookie();
+    window.location.reload();
+  } else {
+    const targetTime = new Date(now);
+    targetTime.setHours(logoutHour, logoutMinute, 0, 0);
+
+    const timeUntilLogout = targetTime - Date.now();
+
+    setTimeout(() => {
+      removeAuthCookie();
+      window.location.reload();
+    }, timeUntilLogout);
+  }
 };
 
 export const removeAuthCookie = () => {

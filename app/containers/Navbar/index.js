@@ -13,10 +13,10 @@ const Navbar = () => {
   return (
     <nav className="container border-b border-gray-500 py-3">
       <div className="flex items-center justify-between">
-        <div className="h-[70px] w-[70px]">
+        <div className="h-[100px] w-[100px]">
           <img
             className="h-full w-full object-cover"
-            src="/images/logoVista.png"
+            src="/images/vistaImg.png"
             alt="logo"
           />
         </div>
