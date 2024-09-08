@@ -56,506 +56,256 @@ const Dashboard = () => {
         <form className="w-full">
           <div className="flex flex-col md:grid grid-cols-2 md:gap-x-5">
             <div className="input-div w-full">
-              <label className="input-label" htmlFor="firstName">
-                First Name
+              <label className="input-label" htmlFor="employeeId">
+                Employee Id
               </label>
               <input
                 className="input-box"
                 type="text"
-                id="firstName"
-                placeholder="Enter your first name "
-                name="firstName"
+                id="employeeId"
+                placeholder="Enter Employee Id "
+                name="employeeId"
                 onChange={handleChange}
                 onPaste={(e) => e.preventDefault()}
               />
               <div className="error">
-                {formError.firstName && (
-                  <div className="form-eror">{formError.firstName}</div>
+                {formError.employeeId && (
+                  <div className="form-eror">{formError.employeeId}</div>
                 )}
               </div>
             </div>
-            <div className="input-div">
-              <label className="input-label" htmlFor="lastName">
-                Last name
+            <div className="input-div w-full">
+              <label className="input-label" htmlFor="businessName">
+                Business Name
               </label>
               <input
                 className="input-box"
                 type="text"
-                id="lastName"
-                placeholder="Enter your last name"
-                name="lastName"
+                id="businessName"
+                placeholder="Enter Business name "
+                name="businessName"
                 onChange={handleChange}
                 onPaste={(e) => e.preventDefault()}
               />
               <div className="error">
-                {formError.lastName && (
-                  <div className="form-eror">{formError.lastName}</div>
+                {formError.businessName && (
+                  <div className="form-eror">{formError.businessName}</div>
                 )}
               </div>
             </div>
+
             <div className="input-div">
-              <label className="input-label" htmlFor="fatherName">
-                Father&apos;s name
+              <label className="input-label" htmlFor="address">
+                Address
               </label>
               <input
                 className="input-box"
                 type="text"
-                id="fatherName"
-                placeholder="Enter your Father's name"
-                name="fatherName"
+                id="address"
+                placeholder="Enter Address"
+                name="address"
                 onChange={handleChange}
                 onPaste={(e) => e.preventDefault()}
               />
               <div className="error">
-                {formError.fatherName && (
-                  <div className="form-eror">{formError.fatherName}</div>
+                {formError.address && (
+                  <div className="form-eror">{formError.address}</div>
                 )}
               </div>
             </div>
+
             <div className="input-div">
-              <label className="input-label" htmlFor="currentAddress">
-                Current Address
+              <label className="input-label" htmlFor="city">
+                City
               </label>
               <input
                 className="input-box"
                 type="text"
-                id="currentAddress"
-                placeholder="Enter your Current Address"
-                name="currentAddress"
+                id="city"
+                placeholder="Enter city"
+                name="city"
                 onChange={handleChange}
                 onPaste={(e) => e.preventDefault()}
               />
               <div className="error">
-                {formError.currentAddress && (
-                  <div className="form-eror">{formError.currentAddress}</div>
+                {formError.city && (
+                  <div className="form-eror">{formError.city}</div>
                 )}
               </div>
             </div>
             <div className="input-div">
-              <label className="input-label" htmlFor="permanentAddress">
-                Permanent Address
+              <label className="input-label" htmlFor="state">
+                State
               </label>
               <input
                 className="input-box"
                 type="text"
-                id="permanentAddress"
-                placeholder="Enter your Permanent Address"
-                name="permanentAddress"
+                id="state"
+                placeholder="Enter state"
+                name="state"
                 onChange={handleChange}
                 onPaste={(e) => e.preventDefault()}
               />
               <div className="error">
-                {formError.permanentAddress && (
-                  <div className="form-eror">{formError.permanentAddress}</div>
+                {formError.state && (
+                  <div className="form-eror">{formError.state}</div>
                 )}
               </div>
             </div>
             <div className="input-div">
-              <label className="input-label" htmlFor="contactNumber">
-                Contact Number
+              <label className="input-label" htmlFor="pinCode">
+                Pin Code
               </label>
               <input
                 className="input-box"
                 type="text"
-                id="contactNumber"
-                placeholder="Enter your Contact Number"
-                name="contactNumber"
-                onChange={handleChange}
-                onPaste={(e) => e.preventDefault()}
-              />
-              <div className="error">
-                {formError.contactNumber && (
-                  <div className="form-eror">{formError.contactNumber}</div>
-                )}
-              </div>
-            </div>
-            <div className="input-div">
-              <label className="input-label" htmlFor="alternateNumber">
-                Alternate Number
-              </label>
-              <input
-                className="input-box"
-                type="text"
-                id="alternateNumber"
-                placeholder="Enter your Alternate Number"
-                name="alternateNumber"
-                onChange={handleChange}
-                onPaste={(e) => e.preventDefault()}
-              />
-              <div className="error">
-                {formError.alternateNumber && (
-                  <div className="form-eror">{formError.alternateNumber}</div>
-                )}
-              </div>
-            </div>
-            <div className="input-div">
-              <label className="input-label" htmlFor="emergencyNumber">
-                Emergency Number
-              </label>
-              <input
-                className="input-box"
-                type="text"
-                id="emergencyNumber"
-                placeholder="Enter your Emergency Number"
-                name="emergencyNumber"
-                onChange={handleChange}
-                onPaste={(e) => e.preventDefault()}
-              />
-              <div className="error">
-                {formError.emergencyNumber && (
-                  <div className="form-eror">{formError.emergencyNumber}</div>
-                )}
-              </div>
-            </div>
-            <div className="input-div">
-              <label className="input-label" htmlFor="emailId">
-                Email
-              </label>
-              <input
-                className="input-box"
-                type="text"
-                id="emailId"
-                placeholder="Enter your Email"
-                name="emailId"
-                onChange={handleChange}
-                onPaste={(e) => e.preventDefault()}
-              />
-              <div className="error">
-                {formError.emailId && (
-                  <div className="form-eror">{formError.emailId}</div>
-                )}
-              </div>
-            </div>
-            <div className="input-div">
-              <label className="input-label" htmlFor="relativeName">
-                Relative Name
-              </label>
-              <input
-                className="input-box"
-                type="text"
-                id="relativeName"
-                placeholder="Enter your Relative Name"
-                name="relativeName"
-                onChange={handleChange}
-                onPaste={(e) => e.preventDefault()}
-              />
-              <div className="error">
-                {formError.relativeName && (
-                  <div className="form-eror">{formError.relativeName}</div>
-                )}
-              </div>
-            </div>
-            <div className="input-div">
-              <label className="input-label" htmlFor="relativeRelation">
-                Relative Relation
-              </label>
-              <input
-                className="input-box"
-                type="text"
-                id="relativeRelation"
-                placeholder="Enter your Relative Relation"
-                name="relativeRelation"
-                onChange={handleChange}
-                onPaste={(e) => e.preventDefault()}
-              />
-              <div className="error">
-                {formError.relativeRelation && (
-                  <div className="form-eror">{formError.relativeRelation}</div>
-                )}
-              </div>
-            </div>
-            <div className="input-div">
-              <label className="input-label" htmlFor="relativeNumber">
-                Relative Number
-              </label>
-              <input
-                className="input-box"
-                type="text"
-                id="relativeNumber"
+                id="pinCode"
                 placeholder="Enter your Relative Number"
-                name="relativeNumber"
+                name="pinCode"
                 onChange={handleChange}
                 onPaste={(e) => e.preventDefault()}
               />
               <div className="error">
-                {formError.relativeNumber && (
-                  <div className="form-eror">{formError.relativeNumber}</div>
+                {formError.pinCode && (
+                  <div className="form-eror">{formError.pinCode}</div>
                 )}
               </div>
             </div>
             <div className="input-div">
-              <label className="input-label" htmlFor="companyName">
-                Company Name
+              <label className="input-label" htmlFor="whatsappNumber">
+                Whatsapp Number
               </label>
               <input
                 className="input-box"
                 type="text"
-                id="companyName"
-                placeholder="Enter your Company Name"
-                name="companyName"
+                id="whatsappNumber"
+                placeholder="Enter whatsapp Number"
+                name="whatsappNumber"
                 onChange={handleChange}
                 onPaste={(e) => e.preventDefault()}
               />
               <div className="error">
-                {formError.companyName && (
-                  <div className="form-eror">{formError.companyName}</div>
+                {formError.whatsappNumber && (
+                  <div className="form-eror">{formError.whatsappNumber}</div>
                 )}
               </div>
             </div>
             <div className="input-div">
-              <label className="input-label" htmlFor="companyAddress">
-                Company Address
+              <label className="input-label" htmlFor="phoneNumber">
+                Phone Number
               </label>
               <input
                 className="input-box"
                 type="text"
-                id="companyAddress"
-                placeholder="Enter your Company Address"
-                name="companyAddress"
+                id="phoneNumber"
+                placeholder="Enter phone number"
+                name="phoneNumber"
                 onChange={handleChange}
                 onPaste={(e) => e.preventDefault()}
               />
               <div className="error">
-                {formError.companyAddress && (
-                  <div className="form-eror">{formError.companyAddress}</div>
+                {formError.phoneNumber && (
+                  <div className="form-eror">{formError.phoneNumber}</div>
                 )}
               </div>
             </div>
             <div className="input-div">
-              <label className="input-label" htmlFor="companyContactNumber">
-                Company Contact Number
+              <label className="input-label" htmlFor="gstNumber">
+                GST Number
               </label>
               <input
                 className="input-box"
                 type="text"
-                id="companyContactNumber"
-                placeholder="Enter your Company Address"
-                name="companyContactNumber"
+                id="gstNumber"
+                placeholder="Enter gst number"
+                name="gstNumber"
                 onChange={handleChange}
                 onPaste={(e) => e.preventDefault()}
               />
               <div className="error">
-                {formError.companyContactNumber && (
+                {formError.gstNumber && (
+                  <div className="form-eror">{formError.gstNumber}</div>
+                )}
+              </div>
+            </div>
+
+            <div className="input-div">
+              <label className="input-label" htmlFor="yearOfEstablishment">
+                Year Of Establishment
+              </label>
+              <input
+                className="input-box"
+                type="text"
+                id="yearOfEstablishment"
+                placeholder="Enter year of establishment"
+                name="yearOfEstablishment"
+                onChange={handleChange}
+                onPaste={(e) => e.preventDefault()}
+              />
+              <div className="error">
+                {formError.yearOfEstablishment && (
                   <div className="form-eror">
-                    {formError.companyContactNumber}
+                    {formError.yearOfEstablishment}
                   </div>
                 )}
               </div>
             </div>
 
             <div className="input-div">
-              <label className="input-label" htmlFor="contactPersonName">
-                Contact Person Name
+              <label className="input-label" htmlFor="rating">
+                Rating
               </label>
               <input
                 className="input-box"
                 type="text"
-                id="contactPersonName"
-                placeholder="Enter your Contact Person Name"
-                name="contactPersonName"
+                id="rating"
+                placeholder="Enter rating"
+                name="rating"
                 onChange={handleChange}
                 onPaste={(e) => e.preventDefault()}
               />
               <div className="error">
-                {formError.contactPersonName && (
-                  <div className="form-eror">{formError.contactPersonName}</div>
+                {formError.rating && (
+                  <div className="form-eror">{formError.rating}</div>
                 )}
               </div>
             </div>
+
             <div className="input-div">
-              <label className="input-label" htmlFor="insuranceStatus">
-                Insuarance Status
-              </label>
-              <select
-                className="input-box"
-                onChange={handleChange}
-                name="insuranceStatus"
-                id=""
-              >
-                <option>--select--</option>
-                <option value="new_customer">New Customer</option>
-                <option value="existing_customer">Existing Customer</option>
-              </select>
-              <div className="error">
-                {formError.insuranceStatus && (
-                  <div className="form-eror">{formError.insuranceStatus}</div>
-                )}
-              </div>
-            </div>
-            <div className="input-div">
-              <label className="input-label" htmlFor="agentName">
-                Agent Name
+              <label className="input-label" htmlFor="sourcesLink">
+                Sources Link
               </label>
               <input
                 className="input-box"
                 type="text"
-                id="agentName"
-                placeholder="Enter your Agent Name"
-                name="agentName"
+                id="sourcesLink"
+                placeholder="Enter link"
+                name="sourcesLink"
                 onChange={handleChange}
                 onPaste={(e) => e.preventDefault()}
               />
               <div className="error">
-                {formError.agentName && (
-                  <div className="form-eror">{formError.agentName}</div>
+                {formError.sourcesLink && (
+                  <div className="form-eror">{formError.sourcesLink}</div>
                 )}
               </div>
             </div>
             <div className="input-div">
-              <label className="input-label" htmlFor="agentEmployeeId">
-                Agent Employee Id
+              <label className="input-label" htmlFor="sourcesPlatform">
+                Sources Platform
               </label>
               <input
                 className="input-box"
                 type="text"
-                id="agentEmployeeId"
-                placeholder="Enter your Agent Employee Id"
-                name="agentEmployeeId"
+                id="sourcesPlatform"
+                placeholder="Enter Sources Platform"
+                name="sourcesPlatform"
                 onChange={handleChange}
                 onPaste={(e) => e.preventDefault()}
               />
               <div className="error">
-                {formError.agentEmployeeId && (
-                  <div className="form-eror">{formError.agentEmployeeId}</div>
-                )}
-              </div>
-            </div>
-            <div className="input-div">
-              <label className="input-label" htmlFor="verifyExecutive">
-                Verify Executive
-              </label>
-              <input
-                className="input-box"
-                type="text"
-                id="verifyExecutive"
-                placeholder="Enter your Verify Executive"
-                name="verifyExecutive"
-                onChange={handleChange}
-                onPaste={(e) => e.preventDefault()}
-              />
-              <div className="error">
-                {formError.verifyExecutive && (
-                  <div className="form-eror">{formError.verifyExecutive}</div>
-                )}
-              </div>
-            </div>
-            <div className="input-div">
-              <label className="input-label" htmlFor="verifyName">
-                Verify Name
-              </label>
-              <input
-                className="input-box"
-                type="text"
-                id="verifyName"
-                placeholder="Enter your Verify Name"
-                name="verifyName"
-                onChange={handleChange}
-                onPaste={(e) => e.preventDefault()}
-              />
-              <div className="error">
-                {formError.verifyName && (
-                  <div className="form-eror">{formError.verifyName}</div>
-                )}
-              </div>
-            </div>
-            <div className="input-div">
-              <label className="input-label" htmlFor="verifyEmployeeId">
-                Verify Employee Id
-              </label>
-              <input
-                className="input-box"
-                type="text"
-                id="verifyEmployeeId"
-                placeholder="Enter yourVerify Employee Id"
-                name="verifyEmployeeId"
-                onChange={handleChange}
-                onPaste={(e) => e.preventDefault()}
-              />
-              <div className="error">
-                {formError.verifyEmployeeId && (
-                  <div className="form-eror">{formError.verifyEmployeeId}</div>
-                )}
-              </div>
-            </div>
-            <div className="input-div">
-              <label className="input-label" htmlFor="verifyNumber">
-                Verify Number
-              </label>
-              <input
-                className="input-box"
-                type="text"
-                id="verifyNumber"
-                placeholder="Enter your Verify Number"
-                name="verifyNumber"
-                onChange={handleChange}
-                onPaste={(e) => e.preventDefault()}
-              />
-              <div className="error">
-                {formError.verifyNumber && (
-                  <div className="form-eror">{formError.verifyNumber}</div>
-                )}
-              </div>
-            </div>
-            <div className="input-div">
-              <label className="input-label" htmlFor="finalStatus">
-                Final Status
-              </label>
-              <select
-                className="input-box"
-                onChange={handleChange}
-                name="finalStatus"
-                id=""
-              >
-                <option>--select--</option>
-                <option value="verification_complete">
-                  Verification Complete
-                </option>
-                <option value="incomplete_verification">
-                  Incomplete Verification
-                </option>
-                <option value="file_rejected">File Rejected</option>
-              </select>
-              <div className="error">
-                {formError.finalStatus && (
-                  <div className="form-eror">{formError.finalStatus}</div>
-                )}
-              </div>
-            </div>
-            <div className="input-div">
-              <label className="input-label" htmlFor="insurancePrice">
-                Insuarance Price
-              </label>
-              <input
-                className="input-box"
-                type="text"
-                id="insurancePrice"
-                placeholder="Enter your Insuarance Price"
-                name="insurancePrice"
-                onChange={handleChange}
-                onPaste={(e) => e.preventDefault()}
-              />
-              <div className="error">
-                {formError.insurancePrice && (
-                  <div className="form-eror">{formError.insurancePrice}</div>
-                )}
-              </div>
-            </div>
-            <div className="input-div col-span-2">
-              <label className="input-label" htmlFor="remark">
-                Remark
-              </label>
-              <input
-                className="input-box"
-                type="text"
-                id="remark"
-                placeholder="Enter your Remark"
-                name="remark"
-                onChange={handleChange}
-                onPaste={(e) => e.preventDefault()}
-              />
-              <div className="error">
-                {formError.remark && (
-                  <div className="form-eror">{formError.remark}</div>
+                {formError.sourcesPlatform && (
+                  <div className="form-eror">{formError.sourcesPlatform}</div>
                 )}
               </div>
             </div>

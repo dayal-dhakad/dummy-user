@@ -8,7 +8,7 @@ import { isYupError, parseYupError } from '@/utils/Yup';
 
 const Login = () => {
   const [isLoading, setIsLoading] = useState(false);
-  const [form, setForm] = useState({});
+  const [form, setForm] = useState({ type: 'user' });
   const [formError, setFormError] = useState({});
   const [setLock, isSetLock] = useState();
   const navigate = useNavigate();
@@ -60,20 +60,20 @@ const Login = () => {
       setIsLoading(false);
     }
   };
-
+  console.log(form, 'form data');
   return (
     <main className=" relative h-screen flex items-center lg:justify-center flex-col text-black overflow-hidden">
       <div className="hidden lg:block absolute z-10 top-7 left-7  w-[150px]">
         <img
           className="h-full w-full object-cover"
-          src="/images/logoVista.png"
+          src="/images/vistaLogo.jpg"
           alt="logo"
         />
       </div>
       <div className=" flex  justify-center lg:hidden my-5  w-[150px]">
         <img
           className="h-full w-full object-cover"
-          src="/images/logoVista.png"
+          src="/images/vistaLogo.jpg"
           alt="logo"
         />
       </div>
@@ -84,18 +84,18 @@ const Login = () => {
             <h2 className="font-comfortaa text-32">Login</h2>
             <div className="py-12 space-y-5">
               <div className="space-y-2">
-                <label htmlFor="email">Your email address</label>
+                <label htmlFor="id">Your ID</label>
                 <input
                   className=" !px-6"
-                  type="email"
-                  id="email"
-                  placeholder="Enter your mail id"
-                  name="email"
+                  type="text"
+                  id="id"
+                  placeholder="Enter your ID"
+                  name="id"
                   onChange={handleChange}
                 />
                 <div className="error">
-                  {formError.email && (
-                    <div className="form-eror">{formError.email}</div>
+                  {formError.id && (
+                    <div className="form-eror">{formError.id}</div>
                   )}
                 </div>
               </div>

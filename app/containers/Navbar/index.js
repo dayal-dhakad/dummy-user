@@ -1,4 +1,4 @@
-import { postReq, removeAuthCookie } from '@/utils/apiHandlers';
+import { removeAuthCookie } from '@/utils/apiHandlers';
 import React from 'react';
 import toast from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
