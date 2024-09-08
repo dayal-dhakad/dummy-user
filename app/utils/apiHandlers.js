@@ -9,17 +9,17 @@ export const setAuthCookie = (token) => {
   const now = new Date();
   const currentHour = now.getHours();
   const currentMinute = now.getMinutes();
-  const loginHour = 9;
-  const logoutHour = 18;
-  const logoutMinute = 45;
+  // const loginHour = 9;
+  const logoutHour = 23;
+  const logoutMinute = 59;
 
-  if (
-    currentHour < loginHour ||
-    (currentHour === loginHour && currentMinute < 0)
-  ) {
-    toast.error('Something went wrong');
-    return;
-  }
+  // if (
+  //   currentHour < loginHour ||
+  //   (currentHour === loginHour && currentMinute < 0)
+  // ) {
+  //   toast.error('Something went wrong');
+  //   return;
+  // }
 
   Cookies.set('token', token);
   Cookies.set(

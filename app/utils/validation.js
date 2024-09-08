@@ -53,4 +53,8 @@ export const validateForm = Yup.object().shape({
     .required('Rating is required'),
   sourcesLink: Yup.string().required('Link is required'),
   sourcesPlatform: Yup.string().required('Sources Platform is required'),
+  employeeName: Yup.string().required('Name is required'),
+  employeeMobileNumber: Yup.string()
+    .matches(/^\+?[0-9]+$/, 'Mobile Number must be digits.')
+    .required('Mobile Number is required'),
 });
