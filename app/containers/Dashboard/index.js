@@ -137,7 +137,7 @@ const Dashboard = () => {
                 className="input-box"
                 type="text"
                 id="pinCode"
-                placeholder="Enter your Relative Number"
+                placeholder="Enter pincode"
                 name="pinCode"
                 onChange={handleChange}
               />
