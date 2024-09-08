@@ -304,7 +304,7 @@ const Dashboard = () => {
                 className="input-box"
                 type="text"
                 id="employeeName"
-                placeholder="Enter Employee Id "
+                placeholder="Enter Employee Name "
                 name="employeeName"
                 onChange={handleChange}
               />
@@ -322,7 +322,7 @@ const Dashboard = () => {
                 className="input-box"
                 type="text"
                 id="employeeMobileNumber"
-                placeholder="Enter Employee Id "
+                placeholder="Enter Employee Mobile Number "
                 name="employeeMobileNumber"
                 onChange={handleChange}
               />
