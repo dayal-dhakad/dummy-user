@@ -60,7 +60,6 @@ const Login = () => {
       setIsLoading(false);
     }
   };
-  console.log(form, 'form data');
   return (
     <main className=" relative h-screen flex items-center lg:justify-center flex-col text-black overflow-hidden">
       <div className="hidden lg:block absolute z-10 top-7 left-7  w-[200px]">
