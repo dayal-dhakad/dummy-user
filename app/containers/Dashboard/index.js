@@ -29,10 +29,27 @@ const Dashboard = () => {
 
       const res = await postReq('/user/user-meta', form);
       const { status, error } = res;
-
+      console.log(res);
       if (status) {
+        setForm({
+          businessName: '',
+          address: '',
+          city: '',
+          state: '',
+          pinCode: '',
+          whatsappNumber: '',
+          phoneNumber: '',
+          gstNumber: '',
+          yearOfEstablishment: '',
+          rating: '',
+          sourcesLink: '',
+          sourcesPlatform: '',
+          employeeId: '',
+          employeeName: '',
+          employeeMobileNumber: '',
+        });
         toast.success('Details Submitted');
-        setForm({});
+        setFormError({});
       } else if (error) {
         Array.isArray(error.message)
           ? error?.message.map((msg) => toast.error(msg))
@@ -53,7 +70,7 @@ const Dashboard = () => {
     <>
       <Navbar />
       <div className="container my-10 w-full">
-        <form className="w-full">
+        <form onSubmit={handleSubmit} className="w-full">
           <div className="flex flex-col md:grid grid-cols-2 md:gap-x-5">
             <div className="input-div w-full">
               <label className="input-label" htmlFor="businessName">
@@ -65,6 +82,7 @@ const Dashboard = () => {
                 id="businessName"
                 placeholder="Enter Business name "
                 name="businessName"
+                value={form?.businessName}
                 onChange={handleChange}
               />
               <div className="error">
@@ -85,6 +103,7 @@ const Dashboard = () => {
                 placeholder="Enter Address"
                 name="address"
                 onChange={handleChange}
+                value={form?.address}
               />
               <div className="error">
                 {formError.address && (
@@ -104,6 +123,7 @@ const Dashboard = () => {
                 placeholder="Enter city"
                 name="city"
                 onChange={handleChange}
+                value={form?.city}
               />
               <div className="error">
                 {formError.city && (
@@ -122,6 +142,7 @@ const Dashboard = () => {
                 placeholder="Enter state"
                 name="state"
                 onChange={handleChange}
+                value={form?.state}
               />
               <div className="error">
                 {formError.state && (
@@ -140,6 +161,7 @@ const Dashboard = () => {
                 placeholder="Enter pincode"
                 name="pinCode"
                 onChange={handleChange}
+                value={form?.pinCode}
               />
               <div className="error">
                 {formError.pinCode && (
@@ -158,6 +180,7 @@ const Dashboard = () => {
                 placeholder="Enter whatsapp Number"
                 name="whatsappNumber"
                 onChange={handleChange}
+                value={form?.whatsappNumber}
               />
               <div className="error">
                 {formError.whatsappNumber && (
@@ -176,6 +199,7 @@ const Dashboard = () => {
                 placeholder="Enter phone number"
                 name="phoneNumber"
                 onChange={handleChange}
+                value={form?.phoneNumber}
               />
               <div className="error">
                 {formError.phoneNumber && (
@@ -194,6 +218,7 @@ const Dashboard = () => {
                 placeholder="Enter gst number"
                 name="gstNumber"
                 onChange={handleChange}
+                value={form?.gstNumber}
               />
               <div className="error">
                 {formError.gstNumber && (
@@ -213,6 +238,7 @@ const Dashboard = () => {
                 placeholder="Enter year of establishment"
                 name="yearOfEstablishment"
                 onChange={handleChange}
+                value={form?.yearOfEstablishment}
               />
               <div className="error">
                 {formError.yearOfEstablishment && (
@@ -234,6 +260,7 @@ const Dashboard = () => {
                 placeholder="Enter rating"
                 name="rating"
                 onChange={handleChange}
+                value={form?.rating}
               />
               <div className="error">
                 {formError.rating && (
@@ -253,6 +280,7 @@ const Dashboard = () => {
                 placeholder="Enter link"
                 name="sourcesLink"
                 onChange={handleChange}
+                value={form?.sourcesLink}
               />
               <div className="error">
                 {formError.sourcesLink && (
@@ -271,6 +299,7 @@ const Dashboard = () => {
                 placeholder="Enter Sources Platform"
                 name="sourcesPlatform"
                 onChange={handleChange}
+                value={form?.sourcesPlatform}
               />
               <div className="error">
                 {formError.sourcesPlatform && (
@@ -289,6 +318,7 @@ const Dashboard = () => {
                 placeholder="Enter Employee Id "
                 name="employeeId"
                 onChange={handleChange}
+                value={form?.employeeId}
               />
               <div className="error">
                 {formError.employeeId && (
@@ -307,6 +337,7 @@ const Dashboard = () => {
                 placeholder="Enter Employee Name "
                 name="employeeName"
                 onChange={handleChange}
+                value={form?.employeeName}
               />
               <div className="error">
                 {formError.employeeName && (
@@ -325,6 +356,7 @@ const Dashboard = () => {
                 placeholder="Enter Employee Mobile Number "
                 name="employeeMobileNumber"
                 onChange={handleChange}
+                value={form?.employeeMobileNumber}
               />
               <div className="error">
                 {formError.employeeMobileNumber && (
@@ -338,7 +370,7 @@ const Dashboard = () => {
           <div className="flex justify-end mt-7">
             <button
               type="submit"
-              onClick={handleSubmit}
+              // onClick={handleSubmit}
               className={`text-white font-medium py-2  px-10 rounded-md text-14 bg-primary-1200 font-comfortaa  flex items-center gap-3 ${
                 isLoading && 'opacity-50'
               }`}

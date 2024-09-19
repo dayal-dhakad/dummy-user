@@ -10,7 +10,7 @@ export const setAuthCookie = (token) => {
   const currentHour = now.getHours();
   const currentMinute = now.getMinutes();
   const loginHour = 9;
-  const logoutHour = 17;
+  const logoutHour = 24;
   const logoutMinute = 0;
 
   if (
